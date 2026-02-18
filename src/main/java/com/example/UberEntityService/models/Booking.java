@@ -29,9 +29,9 @@ public class Booking extends BaseModel{
     @ManyToOne(fetch = FetchType.LAZY)
     private Passenger passenger;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private ExactLocation startLocation;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private ExactLocation endLocation;
 }
